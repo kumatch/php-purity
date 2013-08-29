@@ -34,10 +34,12 @@ $result = $purity->toBlank()->getValue() // returns string ''
 $result = Purity::start($value)->toBlank()->getValue()
 ```
 
-API
-----
+Filtering features
+-------
 
 * to ($to, $froms = array())
+
+* toDefault ($to, array $froms = array('', null))
 
 * toBlank ($froms = array(null))
 
@@ -45,8 +47,15 @@ API
 
 * toBoolean ()
 
-* toDefault ($to, array $froms = array('', null))
+* numericToInter ()
 
+* numericToFloat ()
+
+* trim ($charlist) ... alias trim()
+
+* ltrim ($charlist)  ... alias ltrim()
+
+* rtrim ($charlist)  ... alias rtrim()
 
 
 

@@ -10,11 +10,11 @@ class Purity
 
     /**
      * @param $value
-     * @return Purity
+     * @return static
      */
     static public function start($value)
     {
-        return new self($value);
+        return new static($value);
     }
 
 

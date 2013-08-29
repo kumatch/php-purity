@@ -47,7 +47,7 @@ Filtering features
 
 * toBoolean ()
 
-* numericToInter ()
+* numericToInteger ()
 
 * numericToFloat ()
 

@@ -87,6 +87,93 @@ class Purity
     }
 
     /**
+     * @return $this
+     */
+    public function numericToInteger()
+    {
+        if (is_numeric($this->value)) {
+            $this->value = (int)$this->value;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function numericToFloat()
+    {
+        if (is_numeric($this->value)) {
+            $this->value = (float)$this->value;
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string|array|null $charlist
+     * @return $this
+     */
+    public function trim($charlist = null)
+    {
+        if (!is_string($this->value)) {
+            return $this;
+        }
+
+        if (is_null($charlist)) {
+            $this->value = trim($this->value);
+        } else if (is_array($charlist)) {
+            $this->value = trim($this->value, implode('', $charlist));
+        } else {
+            $this->value = trim($this->value, $charlist);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string|array|null $charlist
+     * @return $this
+     */
+    public function ltrim($charlist = null)
+    {
+        if (!is_string($this->value)) {
+            return $this;
+        }
+
+        if (is_null($charlist)) {
+            $this->value = ltrim($this->value);
+        } else if (is_array($charlist)) {
+            $this->value = ltrim($this->value, implode('', $charlist));
+        } else {
+            $this->value = ltrim($this->value, $charlist);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @param string|array|null $charlist
+     * @return $this
+     */
+    public function rtrim($charlist = null)
+    {
+        if (!is_string($this->value)) {
+            return $this;
+        }
+
+        if (is_null($charlist)) {
+            $this->value = rtrim($this->value);
+        } else if (is_array($charlist)) {
+            $this->value = rtrim($this->value, implode($charlist));
+        } else {
+            $this->value = rtrim($this->value, $charlist);
+        }
+
+        return $this;
+    }
+
+    /**
      * @param $to
      * @param array $froms
      * @return $this

@@ -51,11 +51,11 @@ Filtering features
 
 * numericToFloat ()
 
-* trim ($charlist) ... alias trim()
+* trim ($charlist = null) ... alias trim()
 
-* ltrim ($charlist)  ... alias ltrim()
+* ltrim ($charlist = null)  ... alias ltrim()
 
-* rtrim ($charlist)  ... alias rtrim()
+* rtrim ($charlist = null)  ... alias rtrim()
 
 
 

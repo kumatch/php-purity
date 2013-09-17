@@ -34,7 +34,7 @@ $result = $purity->toBlank()->getValue() // returns string ''
 $result = Purity::start($value)->toBlank()->getValue()
 ```
 
-Filtering features
+Filtering methods
 -------
 
 * to ($to, $froms = array())
@@ -57,6 +57,9 @@ Filtering features
 
 * rtrim ($charlist = null)  ... alias rtrim()
 
+* toLowerCase() ... alias strtolower()
+
+* toUpperCase() ... alias strtoupper()
 
 
 License

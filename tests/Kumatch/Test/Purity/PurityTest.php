@@ -105,4 +105,20 @@ class PurityTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(42, Purity::start(42)->rtrim()->getValue());
         $this->assertNull(Purity::start(null)->rtrim()->getValue());
     }
+
+    public function testToLoserCase()
+    {
+        $this->assertEquals("ok123success!!", Purity::start('OK123Success!!')->toLowerCase()->getValue());
+
+        $this->assertTrue(is_int(Purity::start(42)->toLowerCase()->getValue()));
+        $this->assertFalse(is_int(Purity::start('42')->toLowerCase()->getValue()));
+    }
+
+    public function testToUpperCase()
+    {
+        $this->assertEquals("OK123SUCCESS!!", Purity::start('ok123Success!!')->toUpperCase()->getValue());
+
+        $this->assertTrue(is_int(Purity::start(42)->toUpperCase()->getValue()));
+        $this->assertFalse(is_int(Purity::start('42')->toUpperCase()->getValue()));
+    }
 }

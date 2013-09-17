@@ -174,6 +174,34 @@ class Purity
     }
 
     /**
+     * @return $this
+     */
+    public function toLowerCase()
+    {
+        if (!is_string($this->value)) {
+            return $this;
+        }
+
+        $this->value = strtolower($this->value);
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function toUpperCase()
+    {
+        if (!is_string($this->value)) {
+            return $this;
+        }
+
+        $this->value = strtoupper($this->value);
+
+        return $this;
+    }
+
+    /**
      * @param $to
      * @param array $froms
      * @return $this
